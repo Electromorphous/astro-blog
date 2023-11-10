@@ -6,8 +6,8 @@ heroImage: "@assets/images/rick.jpeg"
 ---
 Hello this is the first blog  testing
 
-
-
 **this is bold**
 
 ## This is Header
+
+![](@assets/images/blog-placeholder-about.jpg)
