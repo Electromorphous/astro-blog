@@ -20,8 +20,10 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props as P
 				<Title pubDate={pubDate} updatedDate={updatedDate} name={`title-${title}`} class="m-0 mb-2">{title}</Title>
 				<hr />
 			</div>
-			<slot />
-			<Comments />
+			<article class="space-y-4 font-body">
+				<slot />
+			</article>
+			<!-- <Comments /> -->
 		</div>
 	</article>
 </Layout>

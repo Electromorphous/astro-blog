@@ -3,7 +3,7 @@ import HeaderLink from "@components/Link.astro";
 import LanguageSelector from "@components/LanguageSelector.astro";
 import { localizePath } from "@utils/t.ts";
 import ThemeSelector from "@components/ThemeSelector.astro";
-import { SITE_TITLE, PAGES } from "@src/consts";
+import { PAGES } from "@src/consts";
 
 const url = Astro.url;
 ---
@@ -24,11 +24,13 @@ const url = Astro.url;
 				}
 			}`}
 	x-init="init()"
-	class="flex flex-col max-w-screen-xl lg:py-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8 z-10 md:pt-2 relative">
-	<div class="p-4 flex flex-row items-center justify-between">
+	class="flex flex-col border-b border-neutral-600 w-screen 
+	 	mx-auto md:items-center md:justify-between md:flex-row
+		md:px-6 lg:px-8 py-3 z-10 relative">
+	<div class=" flex flex-row items-center justify-between">
 		<a	href={localizePath("/", url)}
-			class="flex gap-3 items-center text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark:text-white focus:outline-none focus:shadow-outline">
-			{SITE_TITLE}
+			class="flex gap-3 items-center text-3xl font-display tracking-tight text-gray-900 rounded-lg dark:text-white focus:outline-none focus:shadow-outline select-none">
+			PortalEquatorial
 		</a>
 		<button class="md:hidden text-gray-500 w-10 h-10 relative focus:outline-none" @click="open = !open">
 			<span class="sr-only">Open main menu</span>
@@ -67,7 +69,7 @@ const url = Astro.url;
 					item.children && item.children.length ? (
 						<div @click.away="open = false" class="relative" x-data="{ open: false }">
 							<button @click="open = !open" style="link"  class="mt-[2px]">
-								Title
+								{item.title}
 								<svg
 									fill="currentColor"
 									viewBox="0 0 20 20"
@@ -91,8 +93,8 @@ const url = Astro.url;
 								class="absolute mt-2 bg-white right-0 w-full origin-top-right rounded-md md:w-48 outline-2 border border-gray-300">
 								<div class="px-2 py-2 rounded-md shadow dark:bg-gray-800">
 									{ item.children.map((subitem) =>
-										<HeaderLink href={item.href}>
-											{item.title}
+										<HeaderLink href={subitem.href}>
+											{subitem.title}
 										</HeaderLink>
 									)}
 								</div>
@@ -109,7 +111,7 @@ const url = Astro.url;
 		<ThemeSelector />
 		<LanguageSelector
 			showFlag={false}
-			class="appearance-none cursor-pointer pl-3 pr-2 py-1.5 rounded-md dark:bg-stone-950 dark:text-white focus-visible:outline-none"
+			class="appearance-none cursor-pointer pl-3 pr-2 py-1.5 rounded-md dark:bg-slate-950 dark:text-white focus-visible:outline-none"
 		/>
 	</nav>
 </he>

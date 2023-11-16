@@ -3,7 +3,7 @@
 
 // Website metadata
 export const SITE_URL: string = "https://astrostarter.zank.studio";
-export const SITE_TITLE: string = "Astro Blog";
+export const SITE_TITLE: string = "Potrtal Equatorial";
 export const SITE_DESCRIPTION: string = "Welcome to my website!";
 
 // Repo info
@@ -18,9 +18,7 @@ type Page = {
 	title: string;
 	href: string;
 	children?: Page[];
-};
-
-export const PAGES: Page[] = [
+};export const PAGES: Page[] = [
 	{
 		title: "Home",
 		href: "/",
