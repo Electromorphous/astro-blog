@@ -19,6 +19,7 @@ const posts = (await getCollection("blog", (entry) => entry.slug.startsWith(`${l
 			...post,
 		};
 	});
+posts.reverse();
 ---
 
 <Layout title="Blog">
