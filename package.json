@@ -33,7 +33,7 @@
 		"alpinejs": "^3.13.0",
 		"astro": "^3.2.0",
 		"astro-i18n-aut": "^0.4.23",
-		"astro-netlify-cms": "^0.0.1",
+		"astro-netlify-cms": "^0.5.4",
 		"tailwindcss": "^3.3.3"
 	},
 	"devDependencies": {
