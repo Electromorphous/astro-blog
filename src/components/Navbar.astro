@@ -24,12 +24,12 @@ const url = Astro.url;
 				}
 			}`}
 	x-init="init()"
-	class="flex flex-col border-b border-neutral-600 w-screen 
-	 	mx-auto md:items-center md:justify-between md:flex-row
+	class="flex flex-col border-b border-slate-800/20 dark:border-white/20 
+	 	md:items-center md:justify-between md:flex-row
 		md:px-6 lg:px-8 py-3 z-10 relative">
-	<div class=" flex flex-row items-center justify-between">
+	<div class=" flex flex-row items-center justify-between px-4 md:px-0">
 		<a	href={localizePath("/", url)}
-			class="flex gap-3 items-center text-3xl font-display tracking-tight text-gray-900 rounded-lg dark:text-white focus:outline-none focus:shadow-outline select-none">
+			class="flex gap-3 items-center text-3xl font-display tracking-tight text-black/80 rounded-lg dark:text-white/80 focus:outline-none focus:shadow-outline select-none">
 			PortalEquatorial
 		</a>
 		<button class="md:hidden text-gray-500 w-10 h-10 relative focus:outline-none" @click="open = !open">
@@ -62,7 +62,7 @@ const url = Astro.url;
 		x-transition:leave="transition ease-in duration-200"
 		x-transition:leave-start="opacity-100 transform scale-100"
 		x-transition:leave-end="opacity-0 transform scale-90"
-		class="md:mt-0 md:items-center px-4 flex-grow pb-4 md:pb-0 flex-col gap-2 transition-all ease-out md:transition-none md:justify-center md:flex-row hidden">
+		class="mt-4 md:mt-0 md:items-center px-4 flex-grow pb-4 md:pb-0 flex-col gap-2 transition-all ease-out md:transition-none md:justify-center md:flex-row hidden">
 		<div class="flex flex-col flex-grow text-center gap-2 md:justify-center md:items-center md:flex md:flex-row md:mx-auto">
 			{
 				PAGES.map((item) =>
@@ -114,4 +114,4 @@ const url = Astro.url;
 			class="appearance-none cursor-pointer pl-3 pr-2 py-1.5 rounded-md dark:bg-slate-950 dark:text-white focus-visible:outline-none"
 		/>
 	</nav>
-</he>
+</header>

@@ -18,7 +18,8 @@ type Page = {
 	title: string;
 	href: string;
 	children?: Page[];
-};export const PAGES: Page[] = [
+};
+export const PAGES: Page[] = [
 	{
 		title: "Home",
 		href: "/",
@@ -27,10 +28,10 @@ type Page = {
 		title: "Blog",
 		href: "/blog",
 	},
-	{
-		title: "About",
-		href: "/about",
-	},
+	// {
+	// 	title: "About",
+	// 	href: "/about",
+	// },
 ];
 
 // i18n
